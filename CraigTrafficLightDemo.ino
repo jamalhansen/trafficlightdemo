@@ -83,7 +83,7 @@ void loop()
   digitalWrite(secondLightYellow, LOW);
   digitalWrite(secondLightRed, HIGH);
 
-  //if (digitalRead(inputSecondaryRoad) == HIGH)
+  if (digitalRead(inputSecondaryRoad) == HIGH)
   {
     delay(5000);
 
