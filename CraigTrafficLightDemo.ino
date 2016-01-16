@@ -55,6 +55,15 @@ void runLightsTestPattern()
     delay(1000);              // wait for a second
 }
 
+void allLightsOnPattern()
+{
+    digitalWrite(firstLightGreen, HIGH);
+    digitalWrite(firstLightYellow, HIGH);
+    digitalWrite(firstLightRed, HIGH);
+    digitalWrite(secondLightGreen, HIGH);
+    digitalWrite(secondLightYellow, HIGH);
+    digitalWrite(secondLightRed, HIGH);  
+}
 
 
 // the loop function runs over and over again forever
@@ -65,6 +74,17 @@ void loop()
   {
     runLightsTestPattern();
   }
+
+    //default pattern
+    digitalWrite(firstLightGreen, HIGH);
+    digitalWrite(firstLightYellow, LOW);
+    digitalWrite(firstLightRed, LOW);
+    digitalWrite(secondLightGreen, LOW);
+    digitalWrite(secondLightYellow, LOW);
+    digitalWrite(secondLightRed, HIGH);
+
+
+  
   /*
   if (digitalRead(inputSecondaryRoad) == HIGH)
   {
