@@ -27,42 +27,42 @@ void setup()
   pinMode(secondLightGreen, OUTPUT);
   pinMode(secondLightYellow, OUTPUT);
   pinMode(secondLightRed, OUTPUT);
-  
+
   pinMode(inputSecondaryRoad, INPUT);
 }
 
 void runLightsTestPattern()
 {
-    digitalWrite(firstLightGreen, HIGH);   // turn the LED on (HIGH is the voltage level)
-    digitalWrite(secondLightGreen, HIGH);   // turn the LED on (HIGH is the voltage level)
-    delay(1000);              // wait for a second
-    digitalWrite(firstLightGreen, LOW);    // turn the LED off by making the voltage LOW
-    digitalWrite(secondLightGreen, LOW);    // turn the LED off by making the voltage LOW
-    delay(1000);              // wait for a second
-    
-    digitalWrite(firstLightYellow, HIGH);   // turn the LED on (HIGH is the voltage level)
-    digitalWrite(secondLightYellow, HIGH);   // turn the LED on (HIGH is the voltage level)
-    delay(1000);              // wait for a second
-    digitalWrite(firstLightYellow, LOW);    // turn the LED off by making the voltage LOW
-    digitalWrite(secondLightYellow, LOW);    // turn the LED off by making the voltage LOW
-    delay(1000);              // wait for a second
-    
-    digitalWrite(firstLightRed, HIGH);   // turn the LED on (HIGH is the voltage level)
-    digitalWrite(secondLightRed, HIGH);   // turn the LED on (HIGH is the voltage level)
-    delay(1000);              // wait for a second
-    digitalWrite(firstLightRed, LOW);    // turn the LED off by making the voltage LOW
-    digitalWrite(secondLightRed, LOW);    // turn the LED off by making the voltage LOW
-    delay(1000);              // wait for a second
+  digitalWrite(firstLightGreen, HIGH);   // turn the LED on (HIGH is the voltage level)
+  digitalWrite(secondLightGreen, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);              // wait for a second
+  digitalWrite(firstLightGreen, LOW);    // turn the LED off by making the voltage LOW
+  digitalWrite(secondLightGreen, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);              // wait for a second
+
+  digitalWrite(firstLightYellow, HIGH);   // turn the LED on (HIGH is the voltage level)
+  digitalWrite(secondLightYellow, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);              // wait for a second
+  digitalWrite(firstLightYellow, LOW);    // turn the LED off by making the voltage LOW
+  digitalWrite(secondLightYellow, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);              // wait for a second
+
+  digitalWrite(firstLightRed, HIGH);   // turn the LED on (HIGH is the voltage level)
+  digitalWrite(secondLightRed, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);              // wait for a second
+  digitalWrite(firstLightRed, LOW);    // turn the LED off by making the voltage LOW
+  digitalWrite(secondLightRed, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);              // wait for a second
 }
 
 void allLightsOnPattern()
 {
-    digitalWrite(firstLightGreen, HIGH);
-    digitalWrite(firstLightYellow, HIGH);
-    digitalWrite(firstLightRed, HIGH);
-    digitalWrite(secondLightGreen, HIGH);
-    digitalWrite(secondLightYellow, HIGH);
-    digitalWrite(secondLightRed, HIGH);  
+  digitalWrite(firstLightGreen, HIGH);
+  digitalWrite(firstLightYellow, HIGH);
+  digitalWrite(firstLightRed, HIGH);
+  digitalWrite(secondLightGreen, HIGH);
+  digitalWrite(secondLightYellow, HIGH);
+  digitalWrite(secondLightRed, HIGH);
 }
 
 
@@ -75,19 +75,61 @@ void loop()
     runLightsTestPattern();
   }
 
-    //default pattern
-    digitalWrite(firstLightGreen, HIGH);
-    digitalWrite(firstLightYellow, LOW);
+  //default pattern
+  digitalWrite(firstLightGreen, HIGH);
+  digitalWrite(firstLightYellow, LOW);
+  digitalWrite(firstLightRed, LOW);
+  digitalWrite(secondLightGreen, LOW);
+  digitalWrite(secondLightYellow, LOW);
+  digitalWrite(secondLightRed, HIGH);
+
+  //if (digitalRead(inputSecondaryRoad) == HIGH)
+  {
+    delay(5000);
+
+    //first light yellow pattern
+    digitalWrite(firstLightGreen, LOW);
+    digitalWrite(firstLightYellow, HIGH);
     digitalWrite(firstLightRed, LOW);
     digitalWrite(secondLightGreen, LOW);
     digitalWrite(secondLightYellow, LOW);
     digitalWrite(secondLightRed, HIGH);
+    delay(4000);
 
+    //first light red pattern
+    digitalWrite(firstLightGreen, LOW);
+    digitalWrite(firstLightYellow, LOW);
+    digitalWrite(firstLightRed, HIGH);
+    digitalWrite(secondLightGreen, LOW);
+    digitalWrite(secondLightYellow, LOW);
+    digitalWrite(secondLightRed, HIGH);
+    delay(2000);    
 
-  
-  /*
-  if (digitalRead(inputSecondaryRoad) == HIGH)
-  {
+    //second light green pattern
+    digitalWrite(firstLightGreen, LOW);
+    digitalWrite(firstLightYellow, LOW);
+    digitalWrite(firstLightRed, HIGH);
+    digitalWrite(secondLightGreen, HIGH);
+    digitalWrite(secondLightYellow, LOW);
+    digitalWrite(secondLightRed, LOW);
+    delay(10000);
 
-  }  */
+    //second light yellow pattern
+    digitalWrite(firstLightGreen, LOW);
+    digitalWrite(firstLightYellow, LOW);
+    digitalWrite(firstLightRed, HIGH);
+    digitalWrite(secondLightGreen, LOW);
+    digitalWrite(secondLightYellow, HIGH);
+    digitalWrite(secondLightRed, LOW);
+    delay(4000);
+             
+    //second light red pattern
+    digitalWrite(firstLightGreen, LOW);
+    digitalWrite(firstLightYellow, LOW);
+    digitalWrite(firstLightRed, HIGH);
+    digitalWrite(secondLightGreen, LOW);
+    digitalWrite(secondLightYellow, LOW);
+    digitalWrite(secondLightRed, HIGH);
+    delay(2000);        
+  }
 }
