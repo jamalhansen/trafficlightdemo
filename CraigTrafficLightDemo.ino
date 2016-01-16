@@ -2,6 +2,8 @@
   Traffic Light Demo
 */
 
+bool testMode = false;
+
 // First light
 int firstLightGreen = 3;
 int firstLightYellow = 4;
@@ -29,11 +31,8 @@ void setup()
   pinMode(inputSecondaryRoad, INPUT);
 }
 
-// the loop function runs over and over again forever
-void loop()
+void runLightsTestPattern()
 {
-  if (digitalRead(inputSecondaryRoad) == HIGH)
-  {
     digitalWrite(firstLightGreen, HIGH);   // turn the LED on (HIGH is the voltage level)
     digitalWrite(secondLightGreen, HIGH);   // turn the LED on (HIGH is the voltage level)
     delay(1000);              // wait for a second
@@ -54,5 +53,21 @@ void loop()
     digitalWrite(firstLightRed, LOW);    // turn the LED off by making the voltage LOW
     digitalWrite(secondLightRed, LOW);    // turn the LED off by making the voltage LOW
     delay(1000);              // wait for a second
-  }  
+}
+
+
+
+// the loop function runs over and over again forever
+void loop()
+{
+
+  if (testMode)
+  {
+    runLightsTestPattern();
+  }
+  /*
+  if (digitalRead(inputSecondaryRoad) == HIGH)
+  {
+
+  }  */
 }
