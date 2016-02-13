@@ -20,7 +20,7 @@ int inputSecondaryRoad = 13;
 // the setup function runs once when you press reset or power the board
 void setup()
 {
-  pinMode(firstLightGreen, OUTPUT);
+  pinMode(firstLightGreen, OUTPUT);  //Configures a pin to be used for output
   pinMode(firstLightYellow, OUTPUT);
   pinMode(firstLightRed, OUTPUT);
 
@@ -28,16 +28,18 @@ void setup()
   pinMode(secondLightYellow, OUTPUT);
   pinMode(secondLightRed, OUTPUT);
 
-  pinMode(inputSecondaryRoad, INPUT);
+  pinMode(inputSecondaryRoad, INPUT);  //Configures a pin to be used for input
 }
 
 void runLightsTestPattern()
 {
-  digitalWrite(firstLightGreen, HIGH);
+  //code provided to test the system  
+    
+  digitalWrite(firstLightGreen, HIGH);   //delivers a high voltage to the pin, lighting the LED
   digitalWrite(secondLightGreen, HIGH);
-  delay(1000);
+  delay(1000);   //a wait of 1 second
   digitalWrite(firstLightGreen, LOW);
-  digitalWrite(secondLightGreen, LOW);
+  digitalWrite(secondLightGreen, LOW);   //delivers no voltage to the pin, keeping the LED off
   delay(1000);
 
   digitalWrite(firstLightYellow, HIGH);
@@ -57,6 +59,8 @@ void runLightsTestPattern()
 
 void allLightsOnPattern()
 {
+  // more code to test lights. Can be used to make sure no lights are burned out  
+    
   digitalWrite(firstLightGreen, HIGH);
   digitalWrite(firstLightYellow, HIGH);
   digitalWrite(firstLightRed, HIGH);
@@ -85,7 +89,7 @@ void loop()
 
   if (digitalRead(inputSecondaryRoad) == HIGH)
   {
-    delay(5000);
+    delay(5000);   //a wait of 5 seconds
 
     //first light yellow pattern
     digitalWrite(firstLightGreen, LOW);
