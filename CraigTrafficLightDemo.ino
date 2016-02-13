@@ -33,26 +33,26 @@ void setup()
 
 void runLightsTestPattern()
 {
-  digitalWrite(firstLightGreen, HIGH);   // turn the LED on (HIGH is the voltage level)
-  digitalWrite(secondLightGreen, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);              // wait for a second
-  digitalWrite(firstLightGreen, LOW);    // turn the LED off by making the voltage LOW
-  digitalWrite(secondLightGreen, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);              // wait for a second
+  digitalWrite(firstLightGreen, HIGH);
+  digitalWrite(secondLightGreen, HIGH);
+  delay(1000);
+  digitalWrite(firstLightGreen, LOW);
+  digitalWrite(secondLightGreen, LOW);
+  delay(1000);
 
-  digitalWrite(firstLightYellow, HIGH);   // turn the LED on (HIGH is the voltage level)
-  digitalWrite(secondLightYellow, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);              // wait for a second
-  digitalWrite(firstLightYellow, LOW);    // turn the LED off by making the voltage LOW
-  digitalWrite(secondLightYellow, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);              // wait for a second
+  digitalWrite(firstLightYellow, HIGH);
+  digitalWrite(secondLightYellow, HIGH);
+  delay(1000);
+  digitalWrite(firstLightYellow, LOW);
+  digitalWrite(secondLightYellow, LOW);
+  delay(1000);
 
-  digitalWrite(firstLightRed, HIGH);   // turn the LED on (HIGH is the voltage level)
-  digitalWrite(secondLightRed, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);              // wait for a second
-  digitalWrite(firstLightRed, LOW);    // turn the LED off by making the voltage LOW
-  digitalWrite(secondLightRed, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);              // wait for a second
+  digitalWrite(firstLightRed, HIGH);
+  digitalWrite(secondLightRed, HIGH);
+  delay(1000);
+  digitalWrite(firstLightRed, LOW);
+  digitalWrite(secondLightRed, LOW);
+  delay(1000);
 }
 
 void allLightsOnPattern()
