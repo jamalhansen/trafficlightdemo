@@ -78,62 +78,64 @@ void loop()
   {
     runLightsTestPattern();
   }
-
-  //default pattern
-  digitalWrite(firstLightGreen, HIGH);
-  digitalWrite(firstLightYellow, LOW);
-  digitalWrite(firstLightRed, LOW);
-  digitalWrite(secondLightGreen, LOW);
-  digitalWrite(secondLightYellow, LOW);
-  digitalWrite(secondLightRed, HIGH);
-
-  if (digitalRead(inputSecondaryRoad) == HIGH)
+  else
   {
-    delay(5000);   //a wait of 5 seconds
-
-    //first light yellow pattern
-    digitalWrite(firstLightGreen, LOW);
-    digitalWrite(firstLightYellow, HIGH);
+    //default pattern
+    digitalWrite(firstLightGreen, HIGH);
+    digitalWrite(firstLightYellow, LOW);
     digitalWrite(firstLightRed, LOW);
     digitalWrite(secondLightGreen, LOW);
     digitalWrite(secondLightYellow, LOW);
     digitalWrite(secondLightRed, HIGH);
-    delay(4000);
-
-    //first light red pattern
-    digitalWrite(firstLightGreen, LOW);
-    digitalWrite(firstLightYellow, LOW);
-    digitalWrite(firstLightRed, HIGH);
-    digitalWrite(secondLightGreen, LOW);
-    digitalWrite(secondLightYellow, LOW);
-    digitalWrite(secondLightRed, HIGH);
-    delay(2000);    
-
-    //second light green pattern
-    digitalWrite(firstLightGreen, LOW);
-    digitalWrite(firstLightYellow, LOW);
-    digitalWrite(firstLightRed, HIGH);
-    digitalWrite(secondLightGreen, HIGH);
-    digitalWrite(secondLightYellow, LOW);
-    digitalWrite(secondLightRed, LOW);
-    delay(10000);
-
-    //second light yellow pattern
-    digitalWrite(firstLightGreen, LOW);
-    digitalWrite(firstLightYellow, LOW);
-    digitalWrite(firstLightRed, HIGH);
-    digitalWrite(secondLightGreen, LOW);
-    digitalWrite(secondLightYellow, HIGH);
-    digitalWrite(secondLightRed, LOW);
-    delay(4000);
-             
-    //second light red pattern
-    digitalWrite(firstLightGreen, LOW);
-    digitalWrite(firstLightYellow, LOW);
-    digitalWrite(firstLightRed, HIGH);
-    digitalWrite(secondLightGreen, LOW);
-    digitalWrite(secondLightYellow, LOW);
-    digitalWrite(secondLightRed, HIGH);
-    delay(2000);        
+  
+    if (digitalRead(inputSecondaryRoad) == HIGH)
+    {
+      delay(5000);   //a wait of 5 seconds
+  
+      //first light yellow pattern
+      digitalWrite(firstLightGreen, LOW);
+      digitalWrite(firstLightYellow, HIGH);
+      digitalWrite(firstLightRed, LOW);
+      digitalWrite(secondLightGreen, LOW);
+      digitalWrite(secondLightYellow, LOW);
+      digitalWrite(secondLightRed, HIGH);
+      delay(4000);
+  
+      //first light red pattern
+      digitalWrite(firstLightGreen, LOW);
+      digitalWrite(firstLightYellow, LOW);
+      digitalWrite(firstLightRed, HIGH);
+      digitalWrite(secondLightGreen, LOW);
+      digitalWrite(secondLightYellow, LOW);
+      digitalWrite(secondLightRed, HIGH);
+      delay(2000);    
+  
+      //second light green pattern
+      digitalWrite(firstLightGreen, LOW);
+      digitalWrite(firstLightYellow, LOW);
+      digitalWrite(firstLightRed, HIGH);
+      digitalWrite(secondLightGreen, HIGH);
+      digitalWrite(secondLightYellow, LOW);
+      digitalWrite(secondLightRed, LOW);
+      delay(10000);
+  
+      //second light yellow pattern
+      digitalWrite(firstLightGreen, LOW);
+      digitalWrite(firstLightYellow, LOW);
+      digitalWrite(firstLightRed, HIGH);
+      digitalWrite(secondLightGreen, LOW);
+      digitalWrite(secondLightYellow, HIGH);
+      digitalWrite(secondLightRed, LOW);
+      delay(4000);
+               
+      //second light red pattern
+      digitalWrite(firstLightGreen, LOW);
+      digitalWrite(firstLightYellow, LOW);
+      digitalWrite(firstLightRed, HIGH);
+      digitalWrite(secondLightGreen, LOW);
+      digitalWrite(secondLightYellow, LOW);
+      digitalWrite(secondLightRed, HIGH);
+      delay(2000);        
+    }
   }
 }
