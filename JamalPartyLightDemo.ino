@@ -122,20 +122,20 @@ void loop()
   }
   else
   {
-      greenLightsOnParttern()
+      greenLightsOnParttern();
       delay(500);
-      yellowLightsOnParttern()
+      yellowLightsOnParttern();
       delay(500);
-      redLightsOnParttern()
+      redLightsOnParttern();
       delay(500);
-      allLightsOffPattern()
+      allLightsOffPattern();
       delay(1000);
-      allLightsOnPattern()
-      delay(1000)
-      allLightsOffPattern()
+      allLightsOnPattern();
       delay(1000);
-      allLightsOnPattern()
-      delay(1000)
+      allLightsOffPattern();
+      delay(1000);
+      allLightsOnPattern();
+      delay(1000);
 
     }
   }
