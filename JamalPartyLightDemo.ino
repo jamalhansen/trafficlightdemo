@@ -108,9 +108,9 @@ void redLightsOnPattern()
   digitalWrite(firstLightGreen, LOW);
   digitalWrite(firstLightYellow, LOW);
   digitalWrite(firstLightRed, HIGH);
-  digitalWrite(secondLightGreen, HIGH);
+  digitalWrite(secondLightGreen, LOW);
   digitalWrite(secondLightYellow, LOW);
-  digitalWrite(secondLightRed, LOW);
+  digitalWrite(secondLightRed, HIGH);
 }
 // the loop function runs over and over again forever
 void loop()
