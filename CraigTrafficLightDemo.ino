@@ -9,7 +9,7 @@ int firstLightGreen = 3;
 int firstLightYellow = 4;
 int firstLightRed = 5;
 
-// First light
+// Second light
 int secondLightGreen = 10;
 int secondLightYellow = 11;
 int secondLightRed = 12;
